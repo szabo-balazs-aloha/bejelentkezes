@@ -8,8 +8,37 @@
 }
 html {
         font-size: 62.5%;
+
+        @include respond('small') {
+                font-size: 55%;
+        }
+
 }
 body {
-        font-size: 1.6rem;
         box-sizing: border-box;
+}
+
+header, main, footer {
+        display: block;
+}
+
+input, select, button {
+        outline: none;
+        border-radius: 0;
+        border: none;
+        background: transparent;
+}
+
+a {
+        &:active, &:link, &:visited {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-text-1;
+                transition: all .2s;
+        }
+}
+
+::selection {
+        color: white;
+        background: $color-red-1;
 }

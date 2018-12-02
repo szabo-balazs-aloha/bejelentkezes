@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+[class*='u-margin']{
+        display: block;
+        &+* {
+                display: block;
+        }
+}
+
+.u-margin-small {
+        margin-bottom: 0.5rem !important;
+}
+
+.u-margin-medium {
+        margin-bottom: 2rem !important;
+}
+
+.u-margin-large {
+        margin-bottom: 3rem !important;
+}

@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+.contact {
+        padding: 2rem;
+        border-bottom: 1px solid $color-text-1;
+        li {
+                display: inline-block;
+                &:not(:last-child) {
+                        margin-right: 2rem;
+                }
+        }
+
+        a {
+                font-size: 1.4rem;
+                padding: 0 0.5rem;
+                line-height: 2.1rem;
+
+                &::before {
+                        margin-right: 0.5rem;
+                }
+
+                &:hover {
+                        color: white;
+                        background-color: $color-red-1;
+                }
+        }
+}

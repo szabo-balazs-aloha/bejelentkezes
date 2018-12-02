@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+.form {
+        border: 1px solid $color-text-1;
+        //background: lighten($color-gray-1, 7%);
+        color: $color-text-1;
+        padding: 4rem;
+
+        @include respond('small') {
+                padding: 2rem;
+                border: none;
+        }
+
+        * {
+                color: inherit;
+        }
+
+        &__logo {
+                img {
+                        max-height: 2rem;
+                }
+        }
+
+        &__heading {
+                text-transform: uppercase;
+                font-size: 3.1rem;
+                font-weight: 600;
+                letter-spacing: .3rem;
+                cursor: default;
+        }
+}

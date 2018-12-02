@@ -14,5 +14,91 @@
                 <!--[if lt IE 7]>
                         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
                 <![endif]-->
+
+                <div class="container">
+                        <header class="page-header">
+                                <nav class="contact">
+                                        <ul>
+                                                <li>
+
+                                                        <a href="tel:+3613614260" target="_blank">
+                                                                <i class="fas fa-phone-square"></i>
+                                                                +36 (1) 361 42 60
+                                                        </a>
+                                                </li>
+                                                <li>
+
+                                                        <a href="mailto:info@aloha.hu" target="_blank">
+                                                                <i class="fas fa-envelope"></i>
+                                                                info@aloha.hu
+                                                        </a>
+                                                </li>
+                                                <li>
+
+                                                        <a href="https://www.facebook.com/alohainformatikakft" target="_blank">
+                                                                <i class="fab fa-facebook"></i>
+                                                                facebook
+                                                        </a>
+                                                </li>
+                                        </ul>
+                                </nav>
+                        </header>
+                        <main class="page-main">
+                                <section class="form-container">
+                                        <form method="POST" actions="#" class="form login-form u-margin-large">
+                                                <div class="form__logo u-margin-medium">
+                                                        <a href="http://www2.alohainformatika.hu" target="_blank">
+                                                                <img src="<%=require('images/aloha-logo.png')%>" />
+                                                        </a>
+                                                </div>
+                                                <h1 class="form__heading u-margin-large">Bejelentkezés</h1>
+
+                                                <div class="field u-margin-medium">
+                                                        <label for="guest-name" class="field__label u-margin-small">Kérjük adja meg a nevét</label>
+                                                        <input type="text" class="field__text" id="guest-name" name="guest-name">
+                                                        <div class="field__message"></div>
+                                                </div>
+
+                                                <div class="field u-margin-medium">
+                                                        <label for="aloha-employee" class="field__label u-margin-small">Kérjük válassza ki kihez érkezett</label>
+                                                        <select type="text" class="field__select" id="aloha-employee" name="aloha-employee">
+                                                                <option>Varga Judit</option>
+                                                                <option>Turcsi Zsolt</option>
+                                                                <option>Sudár András</option>
+                                                                <option>Holly András</option>
+                                                        </select>
+                                                        <div class="field__message"></div>
+                                                </div>
+
+                                                <div class="field u-margin-medium">
+                                                        <label for="guest-email-or-phone" class="field__label u-margin-small">Kérjük adja meg email címét vagy telefonszámát</label>
+                                                        <input type="text" class="field__text" id="guest-email-or-phone" name="guest-email-or-phone">
+                                                        <div class="field__message"></div>
+                                                </div>
+
+                                                <div class="field u-margin-medium">
+                                                        <input type="checkbox" class="field__checkbox" id="wifi-request" name="wifi-request" checked>
+                                                        <label for="wifi-request" class="field__label">Amennyiben igényel WiFi kódot, kérjük jelölje</label>
+                                                        <div class="field__message"></div>
+                                                </div>
+
+                                                <div class="field u-margin-large">
+                                                        <input type="checkbox" class="field__checkbox" id="accept-law" name="accept-law">
+                                                        <label for="accept-law" class="field__label">Kérjük jelölje meg, hogy hozzájárul, adatait az érvényben lévő törvényi előírásoknak megfelelően 5 napig tároljuk. A lejárati időt követően azokat véglegesen töröljük!</label>
+                                                        <div class="field__message"></div>
+                                                </div>
+
+                                                <div class="controls">
+                                                        <button class="controls__submit" type="submit">Véglegesítés</button>
+                                                        <button class="controls__reset" type="reset">Adatok ürítése</button>
+                                                </div>
+                                        </form>
+                                        <div class="gdpr u-margin-large">
+                                                <h2 class="gdpr__heading u-margin-small">Gdpr</h2>
+                                                <p>Az Ön adatait az Aloha Inforamtika Kft. (1117 Budapest, Alíz utca 1.) erre és erre használja. Nem adja át harmadik személynek, azokat 5 napon belül törli. Amennyiben úgy dönt, hogy 5 napon belül szeretné töröltetni, akkor ide forduljon. Adatait megfelelően védjük stb.</p>
+                                        </div>
+                                </section>
+                        </main>
+                </div>
         </body>
 </html>

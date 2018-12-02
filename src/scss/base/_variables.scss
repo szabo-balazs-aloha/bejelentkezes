@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+$color-text-1: #5c5c5c;
+$color-text-2: #e5e5e5;
+$color-text-3: #999;
+
+$color-red-1: #be2e30;
+$color-green-1: #b5c588;
+
+$color-gray-1: #e3e7e7;
+$color-gray-2: #909b9e;
+$color-gray-3: #758285;
+$color-gray-4: #697578;
+$color-gray-5: #5d686b;
+
+$color-green-1: #edffdb;
+$color-green-2: #78ce9b;
+
+$breakpoints: (
+  'small':  ( max-width:  767px ),
+  'medium': ( max-width:  992px ),
+  'large':  ( max-width: 1200px )
+) !default;

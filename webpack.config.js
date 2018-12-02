@@ -9,10 +9,11 @@ const config = {
         output: {
                 path: path.resolve(__dirname, 'dist'),
                 filename: 'js/empty.js',
+                publicPath: '/',
         },
         resolve: {
                 extensions: ['.js', '.scss', '.css'],
-                modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+                modules: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules'), path.resolve(__dirname)],
         },
         module: {
                 rules: [{
@@ -68,7 +69,8 @@ const config = {
                                                 loader: 'file-loader',
                                                 options: {
                                                         name: '[name].[ext]',
-                                                        outputPath: 'images/'
+                                                        outputPath: 'images/',
+                                                        publicPath: url => `../images/${url}`,
                                                 }
                                         },
                                         {
@@ -84,7 +86,7 @@ const config = {
         plugins: [
                 new HtmlWebpackPlugin({
                         title: 'Aloha Informatika Kft.',
-                        filename: 'src/index.html'
+                        template: 'src/index.html'
                 }),
                 new MiniCssExtractPlugin({
                         filename: 'css/custom.css',

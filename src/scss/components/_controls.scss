@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.controls {
+        text-align: justify;
+        width: 100%;
+        font-size: 1px;
+        line-height: 0;
+
+        button {
+                font-size: 1.6rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 1rem;
+                cursor: pointer;
+        }
+
+        &__submit {
+                border: 1px solid $color-text-1;
+        }
+
+        &__reset {
+                border: 1px solid $color-red-1;
+                background-color: $color-red-1;
+                color: white;
+        }
+
+        &::after {
+                content: '';
+                width: 100%;
+                display: inline-block;
+                font-size: 0;
+                line-height: 0;
+        }
+}
