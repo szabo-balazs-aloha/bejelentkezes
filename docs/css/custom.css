@@ -5,7 +5,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  line-height: 1.15; }
+  line-height: 1.15;
+  font-family: inherit; }
 
 html {
   font-size: 62.5%; }
@@ -270,6 +271,7 @@ main {
   .time-expired__controls {
     text-align: center; }
   .time-expired__close, .time-expired__reset {
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 1.6rem;
     cursor: pointer; }
