@@ -8,7 +8,7 @@ const config = env => ({
         },
         output: {
                 path: path.resolve(__dirname, 'docs'),
-                filename: 'js/login.js',
+                filename: 'js/login_[hash].js',
                 publicPath: eval(env.production) ? '/bejelentkezes' : '/',
         },
         resolve: {
@@ -89,7 +89,7 @@ const config = env => ({
                         template: 'src/index.html'
                 }),
                 new MiniCssExtractPlugin({
-                        filename: 'css/custom.css',
+                        filename: 'css/custom_[hash].css',
                 }),
         ],
         mode: eval(env.production) ? 'production' : 'development',
