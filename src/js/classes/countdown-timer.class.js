@@ -67,7 +67,7 @@ class CountdownTimer extends Observer {
                 if (this.countdownInterval) {
                         clearInterval(this.countdownInterval);
                         this.countdownGenerator = this.countdownInterval = void 0;
-                        //this.notify({ done: true });
+                        this.notify();
                 }
         }
 
