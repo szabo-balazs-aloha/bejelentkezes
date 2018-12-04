@@ -2,14 +2,14 @@ const path = require('path');
 const postcssPresetEnv = require('postcss-preset-env');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const config = {
+const config = env => ({
         entry: {
                 'index': path.resolve(__dirname, 'src', 'js', 'script.js'),
         },
         output: {
                 path: path.resolve(__dirname, 'docs'),
                 filename: 'js/login.js',
-                publicPath: '/',
+                publicPath: env.production ? '/bejelentkezes' : '/',
         },
         resolve: {
                 extensions: ['.js', '.scss', '.css'],
@@ -70,7 +70,7 @@ const config = {
                                 options: {
                                         name: '[name].[ext]',
                                         outputPath: 'images/',
-                                        publicPath: url => `../images/${url}`,
+                                        publicPath: url => env.production ? `/bejelentkezes/images/${url}` : `../images/${url}`,
                                 }
                         },
                         {
@@ -92,7 +92,7 @@ const config = {
                         filename: 'css/custom.css',
                 }),
         ],
-        // mode: 'development',
-        // watch: true,
-};
+        mode: env.production ? 'production' : 'development',
+        watch: !env.production,
+});
 module.exports = config;
