@@ -9,7 +9,7 @@ const config = {
         output: {
                 path: path.resolve(__dirname, 'docs'),
                 filename: 'js/login.js',
-                publicPath: '/',
+                //publicPath: '/',
         },
         resolve: {
                 extensions: ['.js', '.scss', '.css'],
@@ -70,7 +70,7 @@ const config = {
                                 options: {
                                         name: '[name].[ext]',
                                         outputPath: 'images/',
-                                        publicPath: url => `../images/${url}`,
+                                        publicPath: url => `images/${url}`,
                                 }
                         },
                         {
