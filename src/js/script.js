@@ -2,16 +2,17 @@ import '../scss/style';
 import { resetForm } from './functions/reset-form';
 import { beforeSubmit } from './functions/before-submit';
 import CountdownTimer from './classes/countdown-timer.class';
+import { triggerFormReset } from './functions/trigger-form-reset';
 import { toggleCountdownTimer } from './functions/countdown-timer.dom';
 import { showExpirationPrompt } from './functions/show-expiration-prompt.dom';
 
 const form = document.querySelector('.login-form');
 const timeExpirationPrompt = document.querySelector('.time-expired');
 const countdownTimer = new CountdownTimer(defaultCountdownTime, remainingCountdownTime);
-
 countdownTimer.subscribe(
         toggleCountdownTimer,
-        showExpirationPrompt(expirationPromptOccoursAt)
+        showExpirationPrompt(expirationPromptOccoursAt),
+        triggerFormReset(form)
 );
 
 if (form) {

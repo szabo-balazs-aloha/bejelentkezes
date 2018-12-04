@@ -9,7 +9,7 @@ const config = env => ({
         output: {
                 path: path.resolve(__dirname, 'docs'),
                 filename: 'js/login.js',
-                publicPath: env.production ? '/bejelentkezes' : '/',
+                publicPath: eval(env.production) ? '/bejelentkezes' : '/',
         },
         resolve: {
                 extensions: ['.js', '.scss', '.css'],
@@ -70,7 +70,7 @@ const config = env => ({
                                 options: {
                                         name: '[name].[ext]',
                                         outputPath: 'images/',
-                                        publicPath: url => env.production ? `/bejelentkezes/images/${url}` : `../images/${url}`,
+                                        publicPath: url => eval(env.production) ? `/bejelentkezes/images/${url}` : `../images/${url}`,
                                 }
                         },
                         {
@@ -92,7 +92,7 @@ const config = env => ({
                         filename: 'css/custom.css',
                 }),
         ],
-        mode: env.production ? 'production' : 'development',
-        watch: !env.production,
+        mode: eval(env.production) ? 'production' : 'development',
+        watch: !eval(env.production),
 });
 module.exports = config;
