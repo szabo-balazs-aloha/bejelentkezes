@@ -1,8 +1,13 @@
 @charset 'utf-8';
 
 .field {
+        position: relative;
         font-size: 1.6rem;
         line-height: 2.6rem;
+        overflow: hidden;
+        padding-bottom: 2rem;
+        padding-top: 0.1rem;
+
         * {
                 line-height: inherit;
         }
@@ -11,6 +16,33 @@
                 font-size: 1.6rem;
                 border: 1px solid $color-text-1;
                 background-color: lighten($color-gray-1, 5%);
+
+                &:invalid {
+                        outline: none;
+                        box-shadow: none;
+                }
+        }
+
+        &__must-be-valid {
+                &+.field__message::after, &+label+.field__message::after {
+                        content: '';
+                        position: absolute;
+                        color: $color-red-1;
+                        font-size: 1.2rem;
+                        display: block;
+                        font-weight: 500;
+                        transition: all .5s;
+                }
+
+                &:invalid {
+                        color: $color-red-1; 
+                        border: 1px solid $color-red-1; 
+                        background-color: white;
+                        
+                        &+.field__message::after, &+label+.field__message::after {
+                                content: 'Mező kitöltése kötelező!';
+                        }
+                }
         }
 
         &__label {
@@ -79,6 +111,19 @@
         }
 
         &__message {
+                font-size: 1.2rem;
+                font-weight: 700;
+        }
 
+        &.error {
+                input, select {
+                        border-color: $color-red-1;
+                        background: white;
+                        color: $color-red-1;
+                }
+
+                .field__message {
+                        color: $color-red-1;
+                }
         }
 }

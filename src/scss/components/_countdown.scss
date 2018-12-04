@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+.countdown {
+        position: relative;
+        overflow: hidden;
+        height: 1.61rem;
+        &__timer {
+                position: absolute;
+                font-size: 1.4rem;
+                top: 100%;
+                right: 0;
+                transition: .3s all;
+        }
+
+        &.active {
+               .countdown__timer {
+                        top: 0;
+               }
+        }
+}
